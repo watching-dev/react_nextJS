@@ -1,37 +1,23 @@
 import Hero from "../components/home-page/hero";
 import FeaturePosts from "../components/home-page/feature-posts";
 import { Fragment } from "react";
+import { getFeaturedPosts } from "../lib/posts-util";
 
-function HomePage() {
-  const DUMMY_POSTS = [
-    {
-      slug: "getting1",
-      title: "title",
-      image: "getting.png",
-      excert: "Next",
-      date: "2022-02-10",
-    },
-    {
-      slug: "getting2",
-      title: "title",
-      image: "getting.png",
-      excert: "Next",
-      date: "2022-02-10",
-    },
-    {
-      slug: "getting3",
-      title: "title",
-      image: "getting.png",
-      excert: "Next",
-      date: "2022-02-10",
-    },
-  ];
+function HomePage(props) {
   return (
     <Fragment>
       <Hero />
-      <FeaturePosts posts={DUMMY_POSTS} />
+      <FeaturePosts posts={props.posts} />
     </Fragment>
   );
 }
-
 export default HomePage;
+
+export function getStaticProps() {
+  const featuredPost = getFeaturedPosts();
+  return {
+    props: {
+      posts: featuredPost,
+    },
+  };
+}
