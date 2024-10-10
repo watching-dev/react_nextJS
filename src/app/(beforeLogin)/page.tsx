@@ -1,8 +1,8 @@
 import Image from "next/image";
-import zlogo from "../../public/zlogo.png";
+import zlogo from "../../../public/zlogo.png";
 import Link from "next/link";
 
-import styles from "./page.module.css";
+import styles from "@/app/page.module.css";
 
 export default function Home() {
   return (
