@@ -18,7 +18,7 @@ export default function Home() {
             계정 만들기
           </Link>
           <h3>계정이 있나요?</h3>
-          <Link className={styles.login} href="/i/flow/login">
+          <Link className={styles.login} href="/login">
             로그인 하기
           </Link>
         </div>
