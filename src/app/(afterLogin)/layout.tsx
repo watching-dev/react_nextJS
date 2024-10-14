@@ -2,6 +2,8 @@ import Link from "next/link";
 import styles from "./layout.module.css";
 import Image from "next/image";
 import ZLogo from "../../../public/zlogo.png";
+import NavMenu from "./_component/NavMenu";
+import LogoutButton from "./_component/LogoutButton";
 
 export default function afterLoginLayout({
   children,
@@ -13,15 +15,24 @@ export default function afterLoginLayout({
       <div>after login layout</div>
       <div className={styles.container}>
         <header className={styles.leftSectionWrapper}>
-          <div className={styles.leftSection}>
+          <section className={styles.leftSection}>
             <div className={styles.leftSectionFixed}>
               <Link className={styles.logo} href="/home">
                 <div className={styles.logoPill}>
                   <Image src={ZLogo} alt="z-com" width={40} height={40} />
                 </div>
               </Link>
+              <nav>
+                <ul>
+                  <NavMenu />
+                </ul>
+                <Link href="/compose/tweet" className={styles.postButton}>
+                  게시하기
+                </Link>
+              </nav>
+              <LogoutButton />
             </div>
-          </div>
+          </section>
         </header>
         <div className={styles.rightSectionWrapper}>
           <div className={styles.rightSectionInner}>
