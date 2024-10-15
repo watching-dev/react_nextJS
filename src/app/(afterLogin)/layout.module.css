@@ -1,11 +1,8 @@
 .container {
-  background-color: gray;
   display: flex;
   align-items: stretch;
 }
 .leftSectionWrapper {
-  background-color: red;
-  opacity: 0.5;
   display: flex;
   align-items: flex-end;
   flex-direction: column;
@@ -13,10 +10,8 @@
 }
 
 .leftSection {
-  background-color: orange;
   width: 275px;
   height: 100dvh;
-  opacity: 0.5;
 }
 
 .leftSectionFixed {
@@ -36,7 +31,6 @@
 
 .logo {
   display: inline-block;
-  background-color: white;
   height: 56px;
   margin-top: 2px;
 }
@@ -75,7 +69,6 @@
 }
 
 .rightSectionWrapper {
-  background-color: green;
   display: flex;
   align-items: flex-start;
   height: 100dvh;
@@ -84,7 +77,6 @@
 }
 
 .rightSectionInner {
-  background-color: blueviolet;
   width: 990px;
   height: 100%;
   display: flex;
@@ -92,14 +84,11 @@
 }
 
 .main {
-  background-color: yellow;
   width: 600px;
   height: 200dvh;
-  opacity: 0.5;
 }
 
 .rightSection {
-  background-color: blue;
   width: 350px;
   height: 100%;
 }
